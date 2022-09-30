@@ -79,10 +79,10 @@ const tutoria=[
         id:1,
         idtutor:1,
         idtutorado:5,
-        asignatura:"Metodos numericos",
+        asignatura:"Métodos numéricos",
         ndehoras:4,
-        fecha: "2022-09-13",
-        hora: new Date ('2:13:03 PM')
+        fecha:'2022-09-13',
+        hora:'8:00:00 AM'
     },
     {
         id:2,
@@ -90,8 +90,8 @@ const tutoria=[
         idtutorado:4,
         asignatura:"Interfaces y Multimedia",
         ndehoras:1,
-        fecha: "2022-09-13",
-        hora: new Date ('10:00:03 AM')
+        fecha:'2022-09-11',
+        hora:'5:00:00 PM'
     },
     {
         id:3,
@@ -99,8 +99,8 @@ const tutoria=[
         idtutorado:3,
         asignatura:"Algebra Lineal",
         ndehoras:2,
-        fecha: "2022-09-11",
-        hora: new Date ('11:00:00 AM')
+        fecha:'2022-09-18',
+        hora:'6:00:00 PM'
     },
     {
         id:4,
@@ -108,8 +108,8 @@ const tutoria=[
         idtutorado:2,
         asignatura:"Matemáticas Discretas",
         ndehoras:1,
-        fecha: "2022-09-01",
-        hora: new Date ('8:00:00 AM')
+        fecha:'2022-09-11',
+        hora:'10:00:00 AM'
     },
     {
         id:5,
@@ -117,23 +117,31 @@ const tutoria=[
         idtutorado:1,
         asignatura:"Minería de Datos",
         ndehoras:1,
-        fecha: "2022-09-10",
-        hora: new Date ('6:00:00 PM')
+        fecha:'2022-09-05',
+        hora:'11:00:00 AM'
     },
 ]
 
 
 for (const iterator of tutoria){
+    console.log(`TUTOR`);
     console.log(`Asignatura: ${iterator.asignatura}`);   
     tutoresAux=tutor.find(al=>al.id==iterator.idtutor)
-    console.log(`Tutor: ${tutoresAux.nombre} ${tutoresAux.apellido}, Identificacion: ${tutoresAux.identificacion}, Experticia: ${tutoresAux.experticia}`);
+    console.log(`Tutor: ${tutoresAux.nombre} ${tutoresAux.apellido}\nIdentificacion: ${tutoresAux.identificacion}\nExperticia: ${tutoresAux.experticia}\n`);
 }
 
 for (const elemento in tutorado){
-    console.log(`ID tutorado: ${tutorado[elemento].id}, Tutorado: ${tutorado[elemento].nombre}, ${tutorado[elemento].apellido},
-    Identificacion: ${tutorado[elemento].identificacion}, Carrera: ${tutorado[elemento].carrera}`) 
+    console.log(`TUTORADO`);
+    console.log(`ID tutorado: ${tutorado[elemento].id}\nTutorado: ${tutorado[elemento].nombre} ${tutorado[elemento].apellido}\nIdentificacion: ${tutorado[elemento].identificacion}\nCarrera: ${tutorado[elemento].carrera}\n`) 
 }
 
+tutoria.forEach((elemento)=>{
+    console.log(`TUTORIA`);
+    console.log(`ID de la tutoria: ${elemento.id}\nID del tutor: ${elemento.idtutor}\nID del tutorado: ${elemento.idtutorado}
+    Asignatura: ${elemento.asignatura} Numero de Horas: ${elemento.ndehoras}
+    Fecha: ${elemento.fecha} Hora: ${elemento.hora}`)
+    console.log("")
+})
 
 
 
