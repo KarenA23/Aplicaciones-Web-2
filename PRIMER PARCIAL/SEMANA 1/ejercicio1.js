@@ -81,7 +81,7 @@ const tutoria=[
         idtutorado:5,
         asignatura:"Metodos numericos",
         ndehoras:4,
-        fecha: new Date ('2022-09-20'),
+        fecha: "2022-09-13",
         hora: new Date ('2:13:03 PM')
     },
     {
@@ -130,7 +130,8 @@ for (const iterator of tutoria){
 }
 
 for (const elemento in tutorado){
-    console.log(`ID tutorado: ${tutorado[elemento].id}, Tutorado: ${tutorado[elemento].nombre} ${tutorado[elemento].apellido}, Carrera: ${tutorado[elemento].carrera}`) 
+    console.log(`ID tutorado: ${tutorado[elemento].id}, Tutorado: ${tutorado[elemento].nombre}, ${tutorado[elemento].apellido},
+    Identificacion: ${tutorado[elemento].identificacion}, Carrera: ${tutorado[elemento].carrera}`) 
 }
 
 
