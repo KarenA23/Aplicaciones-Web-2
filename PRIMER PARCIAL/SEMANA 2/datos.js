@@ -85,7 +85,7 @@ const tutoria=[
 ]
 
 
-module.exports = { //Exportar los arrays de objetos
+module.exports = { 
     tutor,
     tutoria
 }
