@@ -85,42 +85,7 @@ const tutoria=[
 ]
 
 
-function findTutoriaForId(id){
-    return new Promise((resolve, reject)=>{
-        const tutorias = tutoria.find((tutorias)=> tutorias.id===id );
-        if (!tutorias)
-        {
-            const error= new Error();
-            error.message="La tutoria no fue encontrado";
-            reject(error);
-        }
-        resolve(tutorias);
-    })
+module.exports = { //Exportar los arrays de objetos
+    tutor,
+    tutoria
 }
-
-function findTutorForId(id){
-    return new Promise((resolve, reject)=>{
-        const tutores =  tutor.find((tutores)=>{
-            return tutores.id===id;
-        });
-        if (!tutores)
-        {
-            const error =  new Error();
-            error.message="No pudimos encontrar el tutor";
-            reject(error);
-        }
-        resolve(tutores);
-    })
-}
-
-findTutoriaForId(5)
-.then((tutorias)=>{ 
-    console.log(tutorias);
-    return findTutorForId(tutorias.idtutor);
-})
-.then((tutores)=>{
-    console.log(tutores)
-})
-.catch((error)=>{
-    console.log(error.message)
-})
