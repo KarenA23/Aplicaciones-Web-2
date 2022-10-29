@@ -17,7 +17,6 @@ app.get('/', (req,res)=>{
 })
 app.get('/:id', (req,res)=>{
     const {id} =  req.params;
-    // req.params.identification
     let result = tutores.filter(p => p.id === id);
     if (result.length>0)
     {
@@ -29,8 +28,6 @@ app.get('/:id', (req,res)=>{
 })
 app.post('/', (req,res)=>{
     const {body} = req;
-    // req.body.name
-    // req.body.address
     tutores.push(body);
     res.status(200).send({
         message:"Dato insertado correctamente",
@@ -40,13 +37,12 @@ app.post('/', (req,res)=>{
 app.put('/', (req,res)=>{
     const {id, nombre, apellido, identificacion, experticia} = req.body;
     let tutor =  tutores.filter(p=> p.id === id)[0] || {}
-    if (tutor.length)
-    {
-        tutor.nombre = nombre;
-        tutor.apellido = apellido;
-        tutor.identificacion = identificacion;
-        tutor.experticia = experticia;
-    }
+    
+    tutor.nombre = nombre;
+    tutor.apellido = apellido;
+    tutor.identificacion = identificacion;
+    tutor.experticia = experticia;
+    
     res.status(200).send(
         {
             message:"El dato fue modificado correctamente",
