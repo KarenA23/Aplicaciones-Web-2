@@ -26,7 +26,6 @@ const TutoriasSchema = Schema(
             type: String,
             required: [ true, ' La hora es boligatoria'],
         },
-
     }
 );
 

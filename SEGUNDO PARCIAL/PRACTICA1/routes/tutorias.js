@@ -42,16 +42,16 @@ router.post('/',
         .not()
         .isEmpty().withMessage('No debe estar vacio el campo hora'),
         validateFields],
- createTutoria);
+createTutoria);
 
- router.put('/:id',
+router.put('/:id',
  [  check('id','Debe ser un id de mongo VALIDO').isMongoId(),
  validateFields],
- updateTutoria);
+updateTutoria);
 
- router.delete('/:id',
+router.delete('/:id',
  [  check('id','Debe ser un id de mongo VALIDO').isMongoId(),
  validateFields],
- deleteTutoria);
+deleteTutoria);
 
 module.exports = router;

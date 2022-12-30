@@ -7,7 +7,7 @@ services:
       - mongo
     environment:
       - PORT=8000
-      - MONGODB_CNN=
+      - MONGODB_CNN= mongodb://localhost:27017
     ports:
       - "8000:8000"
   mongo:
